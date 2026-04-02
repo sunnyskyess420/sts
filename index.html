@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STS – Steve's Taping Services | Professional Drywall Finishing</title>
+    <title>STS – Steve's Taping Services | Drywall Taping & Finishing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -21,9 +21,7 @@
                         'brand-blue-dark': '#2563EB',
                         'brand-green': '#22C55E',
                     },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { inter: ['Inter', 'sans-serif'] }
                 }
             }
         }
@@ -32,106 +30,56 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: #050505; color: #FFFFFF; overflow-x: hidden; }
         html { scroll-behavior: smooth; }
-
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 3px; }
-
         .grid-pattern {
-            background-image:
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 50px 50px;
             mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
             -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
         }
-
         .hero-gradient {
             background: linear-gradient(to right, #FFFFFF, #94A3B8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-
-        .nav-blur {
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
+        .nav-blur { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
         .animate-float { animation: float 6s ease-in-out infinite; }
-
-        @keyframes pulse-slow {
-            50% { opacity: 0.5; }
-        }
+        @keyframes pulse-slow { 50% { opacity: 0.5; } }
         .animate-pulse-slow { animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
         .animate-pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
-
         .service-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .service-card:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-4px);
-        }
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-        }
+        .service-card:hover { border-color: rgba(59, 130, 246, 0.5); transform: translateY(-4px); }
+        .service-card:hover .service-icon { transform: scale(1.1); box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
         .service-icon { transition: all 0.4s ease; }
-
         .gallery-item { position: relative; overflow: hidden; }
         .gallery-item img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .gallery-item:hover img { transform: scale(1.05); }
         .gallery-item .gallery-label {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
+            position: absolute; bottom: 0; left: 0; right: 0;
             padding: 2rem 1rem 1rem;
             background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.4s ease;
+            opacity: 0; transform: translateY(10px); transition: all 0.4s ease;
         }
         .gallery-item:hover .gallery-label { opacity: 1; transform: translateY(0); }
-
         .testimonial-card { transition: all 0.3s ease; }
         .testimonial-card:hover { border-color: rgba(59, 130, 246, 0.3); }
-
-        .cta-glow {
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
-        }
-        .cta-glow:hover {
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 0 80px rgba(59, 130, 246, 0.2);
-        }
-
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        .cta-glow { box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1); }
+        .cta-glow:hover { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 0 80px rgba(59, 130, 246, 0.2); }
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
         .mobile-menu.open { max-height: 400px; }
-
-        .project-badge {
-            background: linear-gradient(135deg, rgba(59,130,246,0.9), rgba(37,99,235,0.9));
-            backdrop-filter: blur(8px);
-        }
-
+        .project-badge { background: linear-gradient(135deg, rgba(59,130,246,0.9), rgba(37,99,235,0.9)); backdrop-filter: blur(8px); }
         .specialist-bar {
             background: linear-gradient(90deg, rgba(59,130,246,0.1), rgba(34,197,94,0.1), rgba(59,130,246,0.1));
-            border-left: 3px solid #3B82F6;
-            border-right: 3px solid #22C55E;
+            border-left: 3px solid #3B82F6; border-right: 3px solid #22C55E;
         }
     </style>
 </head>
 <body class="font-inter">
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-bg/80 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
@@ -142,11 +90,11 @@
                 </div>
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="#services" class="text-text-secondary hover:text-white text-sm transition-colors duration-200">Services</a>
-                <a href="#why" class="text-text-secondary hover:text-white text-sm transition-colors duration-200">Why STS</a>
-                <a href="#gallery" class="text-text-secondary hover:text-white text-sm transition-colors duration-200">Gallery</a>
-                <a href="#testimonials" class="text-text-secondary hover:text-white text-sm transition-colors duration-200">Reviews</a>
-                <a href="#contact" class="text-text-secondary hover:text-white text-sm transition-colors duration-200">Contact</a>
+                <a href="#services" class="text-text-secondary hover:text-white text-sm transition-colors">Services</a>
+                <a href="#why" class="text-text-secondary hover:text-white text-sm transition-colors">Why STS</a>
+                <a href="#gallery" class="text-text-secondary hover:text-white text-sm transition-colors">Gallery</a>
+                <a href="#testimonials" class="text-text-secondary hover:text-white text-sm transition-colors">Reviews</a>
+                <a href="#contact" class="text-text-secondary hover:text-white text-sm transition-colors">Contact</a>
             </div>
             <div class="flex items-center gap-4">
                 <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-brand-blue-dark transition-all duration-200 hover:-translate-y-0.5">
@@ -169,30 +117,25 @@
         </div>
     </nav>
 
-
     <!-- HERO -->
     <section class="min-h-screen flex flex-col items-center justify-center relative pt-20 overflow-hidden">
         <div class="absolute inset-0 grid-pattern"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-[120px] animate-pulse-slow"></div>
         <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-bg to-transparent z-10"></div>
-
         <div class="relative z-20 max-w-7xl mx-auto px-6 text-center">
             <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8">
                 <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse-dot"></span>
                 <span class="text-xs font-medium text-text-secondary uppercase tracking-wider">Licensed & Insured</span>
             </div>
-
             <h1 class="hero-gradient text-5xl sm:text-6xl md:text-8xl font-medium leading-[0.95] tracking-tighter mb-6">
                 Invisible Seams.<br>Perfect Walls.
             </h1>
-
             <p class="text-text-secondary text-lg sm:text-xl md:text-2xl font-light leading-relaxed max-w-2xl mx-auto mb-4">
                 You hang the board. Steve makes it disappear.
             </p>
             <p class="text-text-dim text-base font-light max-w-xl mx-auto mb-10">
                 Professional drywall taping, mudding, and finishing for homeowners and contractors. The seams you'll never see — that's the craft.
             </p>
-
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#contact" class="group inline-flex items-center gap-2 bg-brand-blue text-white text-lg font-medium px-8 py-4 rounded-2xl hover:bg-brand-blue-dark transition-all duration-200 hover:-translate-y-1 cta-glow">
                     Get Your Free Estimate
@@ -203,7 +146,6 @@
                     See Our Work
                 </a>
             </div>
-
             <div class="mt-16 flex flex-wrap items-center justify-center gap-8 text-text-dim text-sm">
                 <div class="flex items-center gap-2">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -223,14 +165,12 @@
                 </div>
             </div>
         </div>
-
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-float">
             <svg class="w-5 h-5 text-text-dim" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </div>
     </section>
 
-
-    <!-- SPECIALIST CALL-OUT -->
+    <!-- SPECIALIST BAR -->
     <section class="relative z-20 py-6 border-y border-white/5 bg-surface/50">
         <div class="max-w-4xl mx-auto px-6">
             <div class="specialist-bar rounded-xl px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 text-center sm:text-left">
@@ -242,8 +182,7 @@
         </div>
     </section>
 
-
-    <!-- STATS BAR -->
+    <!-- STATS -->
     <section class="relative z-20 py-14 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -267,7 +206,6 @@
         </div>
     </section>
 
-
     <!-- SERVICES -->
     <section id="services" class="py-24 md:py-32 relative">
         <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[120px]"></div>
@@ -278,13 +216,9 @@
                     <span class="text-xs font-medium text-brand-blue uppercase tracking-wider">What We Do</span>
                 </div>
                 <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-4">The Taping & Finishing Specialists</h2>
-                <p class="text-text-secondary text-lg md:text-xl font-light max-w-2xl mx-auto">
-                    After the board goes up, that's where Steve comes in. Every seam taped, every coat smoothed, every corner crisp.
-                </p>
+                <p class="text-text-secondary text-lg md:text-xl font-light max-w-2xl mx-auto">After the board goes up, that's where Steve comes in. Every seam taped, every coat smoothed, every corner crisp.</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1: Taping & Mudding — THE main service -->
                 <div class="service-card bg-card border border-white/5 rounded-2xl p-8 lg:col-span-2">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
@@ -297,20 +231,16 @@
                         <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-text-secondary">Inside Corners</span>
                         <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-text-secondary">Outside Corners</span>
                         <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-text-secondary">Fasteners</span>
-                        <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-text-secondary">Metal/Paper Corner Bead</span>
+                        <span class="text-xs bg-white/5 border border-white/10 rounded-full px-3 py-1 text-text-secondary">Corner Bead</span>
                     </div>
                 </div>
-
-                <!-- Card 2: Finishing Levels -->
                 <div class="service-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Finish Levels 1–5</h3>
-                    <p class="text-text-secondary text-sm leading-relaxed">Level 1 for garages and utility spaces. Level 4 for most painted walls. Level 5 for high-end paint, gloss finishes, and areas with strong side-lighting. We match the grade to the job.</p>
+                    <p class="text-text-secondary text-sm leading-relaxed">Level 1 for garages. Level 4 for most painted walls. Level 5 for high-end paint, gloss finishes, and areas with strong side-lighting where every imperfection shows.</p>
                 </div>
-
-                <!-- Card 3: Texture -->
                 <div class="service-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
@@ -318,17 +248,13 @@
                     <h3 class="text-xl font-medium mb-3">Texture Application</h3>
                     <p class="text-text-secondary text-sm leading-relaxed">Knockdown, orange peel, skip trowel, slap brush, smooth — we match existing textures perfectly or apply new ones to spec.</p>
                 </div>
-
-                <!-- Card 4: Repair -->
                 <div class="service-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Drywall Repair</h3>
-                    <p class="text-text-secondary text-sm leading-relaxed">Holes, cracks, water damage, nail pops, failed previous tape jobs — we cut it out, retape it, and blend it so you'd never know it was touched.</p>
+                    <p class="text-text-secondary text-sm leading-relaxed">Holes, cracks, water damage, nail pops, failed tape jobs — we cut it out, retape it, and blend it so you'd never know it was touched.</p>
                 </div>
-
-                <!-- Card 5: Ceiling Finishing -->
                 <div class="service-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -340,8 +266,7 @@
         </div>
     </section>
 
-
-    <!-- WHY CHOOSE US — THE MUSE building -->
+    <!-- WHY STS -->
     <section id="why" class="py-24 md:py-32 relative bg-surface/30">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -351,10 +276,7 @@
                         <span class="text-xs font-medium text-brand-blue uppercase tracking-wider">Why STS</span>
                     </div>
                     <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6">Why Contractors Keep Calling Steve</h2>
-                    <p class="text-text-secondary text-lg font-light leading-relaxed mb-10">
-                        Steve doesn't hang board. He doesn't paint. He does one thing — tape and finish drywall — and he's been doing it for over 20 years. That focus is exactly why the work is so good.
-                    </p>
-
+                    <p class="text-text-secondary text-lg font-light leading-relaxed mb-10">Steve doesn't hang board. He doesn't paint. He does one thing — tape and finish drywall — and he's been doing it for over 20 years. That focus is exactly why the work is so good.</p>
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -371,7 +293,7 @@
                             </div>
                             <div>
                                 <h4 class="font-medium mb-1">Zero Callbacks</h4>
-                                <p class="text-text-secondary text-sm">Contractors love Steve because they don't have to send him back to fix things. It's done right the first time — period.</p>
+                                <p class="text-text-secondary text-sm">Contractors love Steve because they never have to send him back to fix things. Done right the first time — period.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
@@ -389,15 +311,14 @@
                             </div>
                             <div>
                                 <h4 class="font-medium mb-1">Plays Well With Others</h4>
-                                <p class="text-text-secondary text-sm">We coordinate with hangers, painters, electricians, and plumbers. Show up on schedule, stay out of the way of the next trade.</p>
+                                <p class="text-text-secondary text-sm">We coordinate with hangers, painters, electricians, and plumbers. On schedule, out of the way of the next trade.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="relative">
                     <div class="rounded-3xl overflow-hidden border border-white/10">
-                        <img src="https://z-cdn-media.chatglm.cn/files/8f6cf370-5e6f-419a-a9e5-7ff58a139734.jpg?auth_key=1875103375-a94c013fa2dd4f23af73f91fa20f50d8-0-6d2702181b419bce1428d3c0ff261d4e" alt="THE MUSE — Commercial drywall taping project by STS" class="w-full h-[500px] lg:h-[600px] object-cover">
+                        <img src="https://z-cdn-media.chatglm.cn/files/8f6cf370-5e6f-419a-a9e5-7ff58a139734.jpg?auth_key=1875103375-a94c013fa2dd4f23af73f91fa20f50d8-0-6d2702181b419bce1428d3c0ff261d4e" alt="THE MUSE — Commercial drywall project by STS" class="w-full h-[500px] lg:h-[600px] object-cover">
                     </div>
                     <div class="absolute top-6 left-6 project-badge rounded-xl px-4 py-2.5 z-10">
                         <p class="text-xs font-semibold uppercase tracking-wider text-white/80">Featured Project</p>
@@ -426,7 +347,6 @@
         </div>
     </section>
 
-
     <!-- PROCESS -->
     <section id="process" class="py-24 md:py-32 relative">
         <div class="max-w-7xl mx-auto px-6">
@@ -438,10 +358,8 @@
                 <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-4">Simple. Painless. Done Right.</h2>
                 <p class="text-text-secondary text-lg md:text-xl font-light max-w-2xl mx-auto">From first call to final walkthrough — here's what working with STS looks like.</p>
             </div>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                 <div class="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-brand-blue/50 via-brand-blue/20 to-brand-blue/50"></div>
-
                 <div class="relative text-center">
                     <div class="w-14 h-14 rounded-2xl bg-brand-blue text-white flex items-center justify-center text-xl font-semibold mx-auto mb-6 relative z-10">1</div>
                     <h3 class="text-lg font-medium mb-2">Free Estimate</h3>
@@ -466,7 +384,6 @@
         </div>
     </section>
 
-
     <!-- GALLERY -->
     <section id="gallery" class="py-24 md:py-32 relative bg-surface/30">
         <div class="max-w-7xl mx-auto px-6">
@@ -478,63 +395,24 @@
                 <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-4">The Proof Is on the Walls</h2>
                 <p class="text-text-secondary text-lg md:text-xl font-light max-w-2xl mx-auto">Real projects. Real results. No stock photos — just Steve's actual work.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="space-y-4">
                 <!-- Coffered ceiling -->
-                <div class="gallery-item rounded-2xl overflow-hidden border border-white/5 lg:row-span-2">
-                    <img src="https://z-cdn-media.chatglm.cn/files/c50660f3-dd94-499f-8cbe-d8ef5b1377a7.jpg?auth_key=1875103375-2fcc3af5640444baaacb9e2f62ade2d3-0-a193e67bf483250ea7ecc28278ad9df9" alt="Coffered ceiling — STS drywall finishing" class="w-full h-full object-cover min-h-[300px] lg:min-h-full">
+                <div class="gallery-item rounded-2xl overflow-hidden border border-white/5">
+                    <img src="https://z-cdn-media.chatglm.cn/files/c50660f3-dd94-499f-8cbe-d8ef5b1377a7.jpg?auth_key=1875103375-2fcc3af5640444baaacb9e2f62ade2d3-0-a193e67bf483250ea7ecc28278ad9df9" alt="Coffered ceiling — STS drywall finishing" class="w-full h-[350px] md:h-[500px] object-cover">
                     <div class="gallery-label">
                         <p class="text-white text-sm font-medium">Coffered Ceiling Detail</p>
                         <p class="text-text-secondary text-xs">Recessed panels with precision lighting cutouts</p>
                     </div>
                 </div>
-
-                <!-- Recessed lighting ceiling — REPLACED with placeholder, swap with real image -->
+                <!-- Full-width multi-room — fully shown -->
                 <div class="gallery-item rounded-2xl overflow-hidden border border-white/5">
-                    <img src="https://picsum.photos/seed/recessed-ceiling-lights/600/400.jpg" alt="Drywall ceiling with recessed lighting" class="w-full h-[280px] object-cover">
+                    <img src="https://z-cdn-media.chatglm.cn/files/460aab9d-4b79-4a4e-8b4d-fdeb127ab7df.jpg?auth_key=1875106380-f5f68ab236074860b3f69f441fb8a0ff-0-f91133171047c8bd4e48bc4579ec36e6" alt="Multiple rooms during finishing — full project scope" class="w-full h-auto object-contain bg-surface">
                     <div class="gallery-label">
-                        <p class="text-white text-sm font-medium">Recessed Lighting Ceilings</p>
-                        <p class="text-text-secondary text-xs">Clean seams around every light opening</p>
-                    </div>
-                </div>
-
-                <!-- Open space with windows -->
-                <div class="gallery-item rounded-2xl overflow-hidden border border-white/5">
-                    <img src="https://z-cdn-media.chatglm.cn/files/6d31ae95-d0f7-4d4d-a9f4-a57326994b1c.jpg?auth_key=1875103375-6c82889d37d74f1ab84e64d241d6f6f3-0-6cc66f3818a0194749709938a4a46eb3" alt="Large open interior with natural light" class="w-full h-[280px] object-cover">
-                    <div class="gallery-label">
-                        <p class="text-white text-sm font-medium">Open Floor Plan</p>
-                        <p class="text-text-secondary text-xs">Wall-to-ceiling finishing, commercial scale</p>
-                    </div>
-                </div>
-
-                <!-- Built-in niches -->
-                <div class="gallery-item rounded-2xl overflow-hidden border border-white/5">
-                    <img src="https://z-cdn-media.chatglm.cn/files/d3a3b171-155a-41c2-9f4c-a52b3c2dc544.jpg?auth_key=1875103375-f79d2311eaa64993be3fdae2f06f61ce-0-c672764278f5a0d00d40695bdbd6b4a1" alt="Built-in wall niches and TV area" class="w-full h-[280px] object-cover">
-                    <div class="gallery-label">
-                        <p class="text-white text-sm font-medium">Architectural Detail Work</p>
-                        <p class="text-text-secondary text-xs">Built-in niches and feature wall framing</p>
-                    </div>
-                </div>
-
-                <!-- Staircase -->
-                <div class="gallery-item rounded-2xl overflow-hidden border border-white/5">
-                    <img src="https://z-cdn-media.chatglm.cn/files/e837b4be-a1eb-47e9-b686-71622d4d6a49.jpg?auth_key=1875103375-02c52cd2e7324190b54ccf00b55f0ba2-0-6c046f2befc2758c773ad39dbf6ff9c1" alt="Staircase renovation with drywall" class="w-full h-[280px] object-cover">
-                    <div class="gallery-label">
-                        <p class="text-white text-sm font-medium">Residential Renovation</p>
-                        <p class="text-text-secondary text-xs">Multi-level home with staircase detail work</p>
-                    </div>
-                </div>
-
-                <!-- Full-home project — NOW FULL WIDTH, no cropping -->
-                <div class="gallery-item rounded-2xl overflow-hidden border border-white/5 lg:col-span-3">
-                    <img src="https://z-cdn-media.chatglm.cn/files/21800492-532e-4ace-ae48-313a03a3fcee.jpg?auth_key=1875103375-1d11e7ea40ab438ca41af04ccd029177-0-7346f58d90934da9e708696bccfa11f6" alt="Multiple rooms — full home project" class="w-full h-auto max-h-[500px] object-contain bg-surface">
-                    <div class="gallery-label">
-                        <p class="text-white text-sm font-medium">Full-Home Project</p>
-                        <p class="text-text-secondary text-xs">Multiple rooms, consistent quality throughout</p>
+                        <p class="text-white text-sm font-medium">Full-Home Project — Multiple Rooms</p>
+                        <p class="text-text-secondary text-xs">Consistent taping and finishing across every room</p>
                     </div>
                 </div>
             </div>
-
             <div class="text-center mt-10">
                 <p class="text-text-dim text-sm">
                     <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -543,7 +421,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="py-24 md:py-32 relative">
@@ -557,7 +434,6 @@
                 <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-4">Don't Take Our Word for It</h2>
                 <p class="text-text-secondary text-lg md:text-xl font-light max-w-2xl mx-auto">Here's what homeowners and contractors say about working with Steve.</p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="testimonial-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="flex gap-1 mb-4">
@@ -567,7 +443,7 @@
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p class="text-text-secondary text-sm leading-relaxed mb-6">"Steve finished our entire basement — over 2,000 sq ft of drywall taping. The seams are invisible. I've tried to find them and honestly can't. Our painter said it was the best-prepped job he's ever worked on."</p>
+                    <p class="text-text-secondary text-sm leading-relaxed mb-6">"Steve finished our entire basement — over 2,000 sq ft of taping. The seams are invisible. I've tried to find them and honestly can't. Our painter said it was the best-prepped job he's ever worked on."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-brand-blue/20 flex items-center justify-center text-sm font-medium">JM</div>
                         <div>
@@ -576,7 +452,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="flex gap-1 mb-4">
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -585,7 +460,7 @@
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p class="text-text-secondary text-sm leading-relaxed mb-6">"As a general contractor, I need subs I don't have to babysit. Steve is that guy. He shows up early, tapes faster than anyone I've seen, and I've never had to call him back for a fix. He's been my go-to taper for 8 years."</p>
+                    <p class="text-text-secondary text-sm leading-relaxed mb-6">"As a GC, I need subs I don't have to babysit. Steve shows up early, tapes faster than anyone I've seen, and I've never had to call him back for a fix. He's been my go-to taper for 8 years running."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-brand-green/20 flex items-center justify-center text-sm font-medium">RL</div>
                         <div>
@@ -594,7 +469,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card bg-card border border-white/5 rounded-2xl p-8">
                     <div class="flex gap-1 mb-4">
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -603,7 +477,7 @@
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p class="text-text-secondary text-sm leading-relaxed mb-6">"We had water damage and thought we'd need to replace all the drywall. Steve came out, said he could retape the affected areas, and saved us thousands. You absolutely cannot tell where the repair was done."</p>
+                    <p class="text-text-secondary text-sm leading-relaxed mb-6">"We had water damage and thought we'd need to replace everything. Steve came out, retaped the affected areas, and saved us thousands. You absolutely cannot tell where the repair was done."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-sm font-medium">KT</div>
                         <div>
@@ -615,7 +489,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- CONTACT -->
     <section id="contact" class="py-24 md:py-32 relative">
@@ -629,7 +502,6 @@
                     </div>
                     <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-6">Ready to Get<br>Those Walls Done?</h2>
                     <p class="text-text-secondary text-lg md:text-xl font-light leading-relaxed mb-10">Fill out the form, give Steve a call, or shoot a text. Estimates are always free, and Steve typically responds within a few hours.</p>
-
                     <div class="space-y-5">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center flex-shrink-0">
@@ -660,7 +532,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <form id="contactForm" class="bg-card border border-white/5 rounded-3xl p-8 md:p-10 space-y-6">
                         <div>
@@ -710,7 +581,6 @@
         </div>
     </section>
 
-
     <!-- FOOTER -->
     <footer class="border-t border-white/5 bg-surface/30 py-16">
         <div class="max-w-7xl mx-auto px-6">
@@ -756,18 +626,15 @@
         </div>
     </footer>
 
-
     <script>
         var mobileToggle = document.getElementById('mobileToggle');
         var mobileMenu = document.getElementById('mobileMenu');
         var menuOpen = false;
-
         mobileToggle.addEventListener('click', function() {
             menuOpen = !menuOpen;
             if (menuOpen) { mobileMenu.classList.add('open'); }
             else { mobileMenu.classList.remove('open'); }
         });
-
         var mobileLinks = document.querySelectorAll('.mobile-link');
         for (var i = 0; i < mobileLinks.length; i++) {
             mobileLinks[i].addEventListener('click', function() {
@@ -775,11 +642,9 @@
                 mobileMenu.classList.remove('open');
             });
         }
-
         var contactForm = document.getElementById('contactForm');
         var formSuccess = document.getElementById('formSuccess');
         var submitBtn = document.getElementById('submitBtn');
-
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             submitBtn.innerHTML = '<span>Sending...</span>';
@@ -794,15 +659,11 @@
                 setTimeout(function() { formSuccess.classList.add('hidden'); }, 5000);
             }, 1500);
         });
-
         var anchorLinks = document.querySelectorAll('a[href^="#"]');
         for (var j = 0; j < anchorLinks.length; j++) {
             anchorLinks[j].addEventListener('click', function(e) {
                 var target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         }
     </script>
